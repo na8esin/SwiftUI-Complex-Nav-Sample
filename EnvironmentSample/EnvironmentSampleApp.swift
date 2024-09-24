@@ -18,12 +18,13 @@ class Library {
 
 @main
 struct EnvironmentSampleApp: App {
-  @State private var library = Library()
+  //@State private var library = Library()
+  @State private var pathVM = PathVM()
   
   var body: some Scene {
     WindowGroup {
       ContentView()
-        .environment(library)
+        .environment(pathVM)
     }
   }
 }
