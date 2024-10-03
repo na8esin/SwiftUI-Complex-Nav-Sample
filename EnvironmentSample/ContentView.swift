@@ -17,6 +17,12 @@ struct ContentView: View {
       .navigationDestination(for: String.self) { selection in
         SubView(value: "\(selection)")
       }
+      .navigationDestination(for: Route.self) { route in
+        switch route {
+        case .sub2:
+          Sub2View()
+        }
+      }
     }
   }
 }
